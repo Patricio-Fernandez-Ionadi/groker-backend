@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 
-const conectionString = process.env.MONGODB_URI.split('=')[1]
+const conectionString = process.env.MONGODB_URI
 
 // Set Mongoose strictQuery option
 mongoose.set('strictQuery', true)
