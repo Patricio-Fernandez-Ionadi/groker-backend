@@ -6,7 +6,8 @@ const getPlants = async (req, res) => {
 		const plants = await Plant.find().populate('genetic')
 		res.status(200).send(plants)
 	} catch (error) {
-		res.status(500).send(error)
+		console.error('Error al obtener plantas:', error.message)
+		res.status(500).send({ error: error.message })
 	}
 }
 

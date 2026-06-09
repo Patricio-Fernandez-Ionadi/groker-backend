@@ -6,7 +6,8 @@ const getGenetics = async (req, res) => {
 		const genetics = await Genetic.find()
 		res.status(200).send(genetics)
 	} catch (error) {
-		res.status(500).send(error)
+		console.error('Error al obtener genéticas:', error.message)
+		res.status(500).send({ error: error.message })
 	}
 }
 

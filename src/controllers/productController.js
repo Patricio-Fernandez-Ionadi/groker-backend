@@ -6,7 +6,8 @@ const getProducts = async (req, res) => {
 		const products = await Product.find({})
 		res.send(products)
 	} catch (error) {
-		res.status(500).send(error)
+		console.error('Error al obtener productos:', error.message)
+		res.status(500).send({ error: error.message })
 	}
 }
 
