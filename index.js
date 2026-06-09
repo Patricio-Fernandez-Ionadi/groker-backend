@@ -19,10 +19,10 @@ app.use('/api/products', productRoutes)
 app.use('/api/genetics', geneticRoutes)
 
 app.get('/', (req, res) => {
-	res.send('Hello World!')
+  res.send('Hello World!')
 })
 
 // Start server
 app.listen(port, () => {
-	console.log(`Server running on port http://localhost:${port}`)
+  console.log(`Server running on port http://localhost:${port}`)
 })

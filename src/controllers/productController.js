@@ -23,7 +23,6 @@ const addProduct = async (req, res) => {
 			phosphorus,
 			type,
 		})
-		// Guardar el producto en la base de datos
 		const savedProduct = await product.save()
 
 		res.status(201).json(savedProduct)
